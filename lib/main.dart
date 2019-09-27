@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:tv_focus/myFocus.dart';
+import 'package:tv_focus/myTest.dart';
 import 'package:tv_focus/tiles.dart';
 
 void main() => runApp(MyApp());
@@ -109,7 +110,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   new MaterialPageRoute(builder: (context) => new MyFocusClass()));
             },
             child: new Text('Focus class'),
-          )
+          ),
+          new RaisedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new TestColumnList()));
+            },
+            child: new Text('Test Column List'),
+          ),
         ],
       ),
     );
